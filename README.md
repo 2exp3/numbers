@@ -1,2 +1,2 @@
-# numbers
- numerosity comparison task
+# numeros
+ Tarea de numerosidad en Shiny
