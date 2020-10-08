@@ -12,13 +12,11 @@ source("helper_fns.R"); source("page_fns.R")
 # 4 trng trials + 116 exp trials (2 presentations of 58 numbers (29 smaller, 29 greater than the standard 65) )
 load("www/num_list.Rda") 
 
-# set the number of trials you want to use to test the app (from 1 to 116)
+# set the number of epxerimental trials you want to use to test the app (from 1 to 116)
 ntr=4 
 
-# set save dir (local). You should have 4 subdirs within the save_dir: sessions, trng, exp & demog
-# save_dir="/srv/shiny-server/numeros/data/"
-
-save_dir="C:/Users/agusa/Documents/GitHub/numeros/data/"
+# set save dir (locally). You should have 4 subdirs within the save_dir: sessions, trng, exp & demog
+save_dir=paste0(getwd(),"/data/")
 
 # Load app pages' lists ====================================================
 lists_dir="www/lists/"
@@ -71,8 +69,7 @@ server = function(input, output, session) {
   set.seed(round( as.numeric(Sys.time() ) ) )
   list_idx=sample(ncol(exp_list_num),1)
   
-  # set trng and exp list df and ITIs
-  
+  # set trng and exp list dfs and ITIs
   trng_trials=data.frame(trng_list,
                          "ITI"=runif(nrow(trng_list),.7,1)*1000 )
   
@@ -80,7 +77,7 @@ server = function(input, output, session) {
                           "truth"= exp_list_truth[[list_idx]], 
                           "ITI"= runif(nrow(exp_list_num),.7,1)*1000)[1:ntr,]
   
-  # set a random worker ID
+  # set a 3-letter random workerID
   wid =  paste(sample(letters,3),collapse = '') 
   
   # Reactives to store data during game
@@ -160,7 +157,7 @@ server = function(input, output, session) {
     
   })
   
-  # last TRNG trial ppage complete
+  # last TRNG trial page complete
   observeEvent(input[["endTrng_next"]],{
     updateProgressBar(session = session,id = "pb1", value = 0 )
     shinyjs::runjs("document.body.style.cursor = 'none';") # no muestro mouse
@@ -233,11 +230,6 @@ server = function(input, output, session) {
     
   })
   
-  # Debrief page complete
-  observeEvent(input[["Goodbye_next"]],{
-    nextPage(pageId = "Goodbye", ctrlVals = currVal, nextPageId ="end",
-              pageList = goodbye.list, globId = "Goodbye")
-  })
   
   # Save demog data ===================================
   # Demog page complete

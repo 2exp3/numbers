@@ -1,11 +1,4 @@
 id	text	page	type	choices	choiceNames	reverse	placeholder	min	max	disabled	checkType	width	height	inline	randomize
-NA	"¡Muchas gracias por participar!"	1	h3	NA	NA	NA	NA	NA	NA	0	NA	500px	NA	NA	0
-NA	"Si te gustó o te pareció interesante, compartilo con tus contactos."	1	p	NA	NA	NA	NA	NA	NA	0	NA	500px	NA	NA	0
-NA	"<p>Sumate a nuestra <a href='https://groups.google.com/forum/#!forum/c3online/join' target="_blank">lista de contactos</a> para participar de mas experimentos.</p>"	1	HTML	NA	NA	NA	NA	NA	NA	0	NA	NA	NA	NA	0
+NA	"Debriefing/goodbye text."	1	h3	NA	NA	NA	NA	NA	NA	0	NA	500px	NA	NA	0
 NA	"<hr/>"	1	HTML	NA	NA	NA	NA	NA	NA	0	NA	NA	NA	NA	0
-NA	"Si tenés dudas o querés enterarte de los resultados cuando terminemos el estudio, escribinos a yo.tomo.decisiones@gmail.com"	1	p	NA	NA	NA	NA	NA	NA	0	NA	500px	NA	NA	0
-NA	"Ya podés cerrar esta ventana."	1	p	NA	NA	NA	NA	NA	NA	0	NA	500px	NA	NA	0
-NA	"<hr/>"	1	HTML	NA	NA	NA	NA	NA	NA	0	NA	NA	NA	NA	0
-NA	"Investigadores responsables:"	1	h4	NA	NA	NA	NA	NA	NA	0	NA	500px	NA	NA	0
-NA	"Agustín Perez Santangelo (UTDT - CONICET)"	1	p	NA	NA	NA	NA	NA	NA	0	NA	500px	NA	NA	0
-NA	"Guillermo Solovey (Instituto de Cálculo - UBA - CONICET)"	1	p	NA	NA	NA	NA	NA	NA	0	NA	500px	NA	NA	0
+NA	"You may close this window."	1	p	NA	NA	NA	NA	NA	NA	0	NA	500px	NA	NA	0
