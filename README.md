@@ -1,6 +1,6 @@
 # Number comparison task in Shiny
- This is a "mock" version of the app used in our online study (arXiv), without the consent and the debrief text and with only 4 experimental trials. 
- For a quick peep at the app, go to https://agusps.shinyapps.io/numeros/. Otherwise, you may clone this repo and run it locally.
+ This is a "mock" version of the app used in our online study (arXiv), without the consent and the debrief text and with 4 experimental trials. 
+ For an up and running demo version of the app, go to https://agusps.shinyapps.io/numeros/. Otherwise, you may download/clone this repo and run it locally.
  As we ran our study in Argentina, most of the displayed text is in Spanish.
  
  ## The why
