@@ -215,17 +215,18 @@ server = function(input, output, session) {
 
         data.session=list(reactiveValuesToList(session$clientData),input$osbrow)
         
-        saveData(data.session, 
-                  outputDir= paste0(save_dir,"sessions"),
-                  partId = data.exp$id, suffix = "_s")
-        
-        saveData(data.trng,  
-                  outputDir= paste0(save_dir,"trng"),
-                  partId = data.exp$id, suffix = "_t")
-        
-        saveData(data.exp, 
-                  outputDir= paste0(save_dir,"exp"),
-                  partId = data.exp$id, suffix = "_x")
+        # Uncomment this to save data
+        # saveData(data.session, 
+        #           outputDir= paste0(save_dir,"sessions"),
+        #           partId = data.exp$id, suffix = "_s")
+        # 
+        # saveData(data.trng,  
+        #           outputDir= paste0(save_dir,"trng"),
+        #           partId = data.exp$id, suffix = "_t")
+        # 
+        # saveData(data.exp, 
+        #           outputDir= paste0(save_dir,"exp"),
+        #           partId = data.exp$id, suffix = "_x")
       })}
     
   })
@@ -243,10 +244,11 @@ server = function(input, output, session) {
           "age" = input$Demog_age,
           "sex" = input$Demog_sex
           )
-        saveData(data.demo,  
-                  outputDir= paste0(save_dir,"demog"),
-                  partId = data.demo$id, suffix = "_d")
-        
+        # Uncomment this to save data
+        # saveData(data.demo,  
+        #           outputDir= paste0(save_dir,"demog"),
+        #           partId = data.demo$id, suffix = "_d")
+        # 
         # Compute final score for display (Correct: +2. Error/timeout: -1)
         currVal$score = 2*(sum(expData$resp==as.numeric(exp_trials$truth) ) ) -
           1*(sum(expData$resp!=as.numeric(exp_trials$truth) ) )
