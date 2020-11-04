@@ -1,7 +1,7 @@
 # Number comparison task in Shiny
- This is a "mock" version of the app used in our online study (arXiv), without the consent and the debrief text and with only 4 experimental trials. 
- For a quick peep at the app, go to https://agusps.shinyapps.io/numeros/. Otherwise, you may clone this repo and run it locally.
- As we run our study in Argentina, most of the displayed text is in Spanish.
+ This is a "mock" version of the app used in our online study (arXiv), without the consent and the debrief text and with 4 experimental trials. 
+ For an up-and-running demo version of the app, go to https://agusps.shinyapps.io/numeros/. Otherwise, you may download/clone this repo and run it locally.
+ As we ran our study in Argentina, most of the displayed text is in Spanish.
  
  ## The why
  Shiny is a powerful yet straight-forward package for the design and development of online interactive tools (apps). It is most famous for interactive data-viz apps and its power as an experimental-psychology tool has yet to be fully harnessed.
@@ -15,4 +15,3 @@
  More importantly, we addressed RT collection using JavaScript functions (trial.js in www/). 
  Although R scripts are thoroughly annotated, we did not intend to provide a flexible and general tool, rather a well-functioning and reliable app for this specific task. That said, it is fairly straight-forward to adapt it to any other 2-alternative forced choice experimental paradigm.
  
-
